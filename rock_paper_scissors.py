@@ -2,6 +2,8 @@ import random
 
 print("Let's play Rock Paper Scissors!")
 play = "y"
+score_player = 0
+score_computer = 0
 while play == "y":
     player_move = input("Choose your weapon - type 'r' for rock, 'p' for paper or 's' for scissors: ")
 
@@ -48,11 +50,14 @@ while play == "y":
     if result == draw:
         print("It's a draw!")
     elif result == player_wins:
+        score_player += 1
         print("Congratulation! You win!")
     elif result == computer_wins:
+        score_computer += 1
         print("I am sorry, you lose!")
 
     print()
+    print(f"Current score player:computer is {score_player}:{score_computer}.")
     play = input("Wanna play again? y/n ")
 
     while (play not in ["y", "n"]):
