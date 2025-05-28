@@ -12,7 +12,7 @@ while play == "y":
     scissors = "Scissors"
 
     while (player_move not in ["r", "p", "s"]):
-        player_move = input("This is not a valid input, please type 'r', 'p' or 's':")
+        player_move = input("This is not a valid input, please type 'r', 'p' or 's': ")
 
     if player_move == "r":
         player_move = rock
@@ -57,11 +57,11 @@ while play == "y":
         print("I am sorry, you lose!")
 
     print()
-    print(f"Current score player:computer is {score_player}:{score_computer}.")
+    print(f"Current score Player vs Computer is {score_player}:{score_computer}.")
     play = input("Wanna play again? y/n ")
 
     while (play not in ["y", "n"]):
-        play = input("This is not a valid input, please type 'y' or 'n'")
+        play = input("This is not a valid input, please type 'y' or 'n': ")
 
     if play == "n":
         print("Thank you for playing!")
